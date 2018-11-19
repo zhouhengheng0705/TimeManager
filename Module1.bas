@@ -1,41 +1,40 @@
 Attribute VB_Name = "Module1"
-' Á–h•ÛçŒ_–ñŠÇ—ƒc[ƒ‹ Macro
-' ƒ}ƒNƒ‹L˜^“ú : 2017/07/05  ƒ†[ƒU[–¼ :üPP
-Public Const ƒVƒXƒeƒ€ƒf[ƒ^ŠJns = 5
-Public Const ƒVƒXƒeƒ€ƒf[ƒ^ŠJn—ñ = 2
-Public Const ƒVƒXƒeƒ€ŠJn”N = 2015
-Public İ’èDic As Object
-Public Const ƒVƒXƒeƒ€í•Ê_ƒo[ƒWƒ‡ƒ“ = 1
-Public Const ƒVƒXƒeƒ€í•Ê_“`•[í•ÊŠ·Z•â³”{—¦ = 11
-Public Const ƒVƒXƒeƒ€ó‹µ_–¢Šm’è = 1
-Public Const ƒVƒXƒeƒ€ó‹µ_V‹K = 2
-Public Const ƒVƒXƒeƒ€ó‹µ_Œp‘± = 3
-Public Const ƒVƒXƒeƒ€ó‹µ_‘SXV = 4
-Public Const ƒVƒXƒeƒ€ó‹µ_•”•ªXVw—ß = 5 '–¢g—pF
-Public Const ƒVƒXƒeƒ€ó‹µ_•”•ªXV = 6
-Public Const ƒVƒXƒeƒ€ó‹µ_‰ğ–ñ = 7
+' ãƒã‚¯ãƒ­è¨˜éŒ²æ—¥ : 2017/07/05  ãƒ¦ãƒ¼ã‚¶ãƒ¼å :å‘¨æ’æ’
+Public Const ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹è¡Œ = 5
+Public Const ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹åˆ— = 2
+Public Const ã‚·ã‚¹ãƒ†ãƒ é–‹å§‹å¹´ = 2015
+Public è¨­å®šDic As Object
+Public Const ã‚·ã‚¹ãƒ†ãƒ ç¨®åˆ¥_ãƒãƒ¼ã‚¸ãƒ§ãƒ³ = 1
+Public Const ã‚·ã‚¹ãƒ†ãƒ ç¨®åˆ¥_ä¼ç¥¨ç¨®åˆ¥æ›ç®—è£œæ­£å€ç‡ = 11
+Public Const ã‚·ã‚¹ãƒ†ãƒ çŠ¶æ³_æœªç¢ºå®š = 1
+Public Const ã‚·ã‚¹ãƒ†ãƒ çŠ¶æ³_æ–°è¦ = 2
+Public Const ã‚·ã‚¹ãƒ†ãƒ çŠ¶æ³_ç¶™ç¶š = 3
+Public Const ã‚·ã‚¹ãƒ†ãƒ çŠ¶æ³_å…¨æ›´æ–° = 4
+Public Const ã‚·ã‚¹ãƒ†ãƒ çŠ¶æ³_éƒ¨åˆ†æ›´æ–°æŒ‡ä»¤ = 5 'æœªä½¿ç”¨F
+Public Const ã‚·ã‚¹ãƒ†ãƒ çŠ¶æ³_éƒ¨åˆ†æ›´æ–° = 6
+Public Const ã‚·ã‚¹ãƒ†ãƒ çŠ¶æ³_è§£ç´„ = 7
 
-Public Const ‹Î–±İ’è_–{Ğ = 1
-Public Const ‹Î–±İ’è_“ú‹Î‘”Ô = 2
-Public Const ‹Î–±İ’è_“ú‹Î’x”Ô = 3
-Public Const ‹Î–±İ’è_ƒXƒ‰ƒCƒh = 4
-Public Const ‹Î–±İ’è_–{Ğ10 = 5
+Public Const å‹¤å‹™è¨­å®š_æœ¬ç¤¾ = 1
+Public Const å‹¤å‹™è¨­å®š_æ—¥å‹¤æ—©ç•ª = 2
+Public Const å‹¤å‹™è¨­å®š_æ—¥å‹¤é…ç•ª = 3
+Public Const å‹¤å‹™è¨­å®š_ã‚¹ãƒ©ã‚¤ãƒ‰ = 4
+Public Const å‹¤å‹™è¨­å®š_æœ¬ç¤¾10æ™‚ = 5
 
-Public Const ƒXƒe[ƒ^ƒX_V‹K = 1
-Public Const ƒXƒe[ƒ^ƒX_is’† = 2
-Public Const ƒXƒe[ƒ^ƒX_ƒŠƒŠ[ƒX‘Ò‚¿ = 3
-Public Const ƒXƒe[ƒ^ƒX_I—¹ = 4
+Public Const ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹_æ–°è¦ = 1
+Public Const ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹_é€²è¡Œä¸­ = 2
+Public Const ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹_ãƒªãƒªãƒ¼ã‚¹å¾…ã¡ = 3
+Public Const ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹_çµ‚äº† = 4
 
 
-Public Const ƒfƒoƒbƒOƒ‚[ƒh = False
-Public Const ƒpƒXƒ[ƒh = "zhh99072"
-Public Const ƒf[ƒ^ƒx[ƒX–¼ = "ŠÔŠÇ—.accdb"
-Public Const DAOƒGƒ“ƒWƒ“ = "DAO.DBEngine.120"
-Public Const DBƒpƒXƒ[ƒh = "tcomm"
-Public Const •ÛŒìƒpƒXƒ[ƒh = "tcomm"
+Public Const ãƒ‡ãƒãƒƒã‚°ãƒ¢ãƒ¼ãƒ‰ = False
+Public Const ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ = "zhh99072"
+Public Const ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹å = "æ™‚é–“ç®¡ç†.accdb"
+Public Const DAOã‚¨ãƒ³ã‚¸ãƒ³ = "DAO.DBEngine.120"
+Public Const DBãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ = "tcomm"
+Public Const ä¿è­·ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ = "tcomm"
 '---------------------------------------------------------------------------------------------
-'WindowsAPI’è‹`
-'ƒEƒBƒ“ƒhƒE§Œä—p
+'WindowsAPIå®šç¾©
+'ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦åˆ¶å¾¡ç”¨
 Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" _
         (ByVal lpClassName As String, ByVal lpWindowName As String) As Long
 Private Declare Function GetWindowLong Lib "user32" Alias "GetWindowLongA" _
@@ -48,23 +47,23 @@ Private Declare Function SetWindowPos Lib "user32" ( _
         ByVal cx As Long, ByVal cy As Long, _
         ByVal wFlags As Long) As Long
 Private Declare Function DrawMenuBar Lib "user32" (ByVal hWnd As Long) As Long
-Private Const GWL_STYLE = (-16) 'ƒEƒBƒ“ƒhƒEƒXƒ^ƒCƒ‹‚ğæ“¾
-Private Const WS_THICKFRAME = &H40000 'ƒEƒBƒ“ƒhƒE‚ÌƒTƒCƒY•ÏX
-Private Const WS_MINIMIZEBOX = &H20000 'Å¬‰»ƒ{ƒ^ƒ“
-Private Const WS_MAXIMIZEBOX = &H10000 'Å‘å‰»ƒ{ƒ^ƒ“
+Private Const GWL_STYLE = (-16) 'ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚¹ã‚¿ã‚¤ãƒ«ã‚’å–å¾—
+Private Const WS_THICKFRAME = &H40000 'ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ã‚µã‚¤ã‚ºå¤‰æ›´
+Private Const WS_MINIMIZEBOX = &H20000 'æœ€å°åŒ–ãƒœã‚¿ãƒ³
+Private Const WS_MAXIMIZEBOX = &H10000 'æœ€å¤§åŒ–ãƒœã‚¿ãƒ³
 Private Const LP_CLASSNAME = "ThunderDFrame"
 
-'hWndInsertAfter‚Ìİ’è
-Private Const TEMAE_SET = 0 'è‘O‚ÉƒZƒbƒg
-Private Const USIRO_SET = 1 'Œã‚ë‚ÉƒZƒbƒg
-Private Const TUNENI_TEMAE_SET = -1 'í‚Éè‘O‚ÉƒZƒbƒg
-Private Const KAIJYO = -2 '‰ğœ
-'wFlags‚Ìİ’è
-Private Const HYOUZI_SURU = &H40 '•\¦‚·‚é
-Private Const NO_SIZE = &H1 'ƒTƒCƒY‚ğİ’è‚µ‚È‚¢
-Private Const NO_MOVE = &H2 'ˆÊ’u‚ğİ’è‚µ‚È‚¢
+'hWndInsertAfterã®è¨­å®š
+Private Const TEMAE_SET = 0 'æ‰‹å‰ã«ã‚»ãƒƒãƒˆ
+Private Const USIRO_SET = 1 'å¾Œã‚ã«ã‚»ãƒƒãƒˆ
+Private Const TUNENI_TEMAE_SET = -1 'å¸¸ã«æ‰‹å‰ã«ã‚»ãƒƒãƒˆ
+Private Const KAIJYO = -2 'è§£é™¤
+'wFlagsã®è¨­å®š
+Private Const HYOUZI_SURU = &H40 'è¡¨ç¤ºã™ã‚‹
+Private Const NO_SIZE = &H1 'ã‚µã‚¤ã‚ºã‚’è¨­å®šã—ãªã„
+Private Const NO_MOVE = &H2 'ä½ç½®ã‚’è¨­å®šã—ãªã„
 
-'ƒAƒCƒRƒ“§Œä—p
+'ã‚¢ã‚¤ã‚³ãƒ³åˆ¶å¾¡ç”¨
 Private Declare Function LoadIconBynum Lib "user32" Alias _
         "LoadIconA" (ByVal hInstance As Long, ByVal lpIconName As Long) As Long
 Private Declare Function GetActiveWindow Lib "user32" () As Long
@@ -77,29 +76,29 @@ Private Declare Function ReleaseDC Lib "user32" _
 Private Declare Function DestroyIcon Lib "user32.dll" _
         (ByVal hIcon As Long) As Long
 
-Private Const IDI_ASTERISK = 32516&     '1:î•ñ
-Private Const IDI_EXCLAMATION = 32515&  '2:’ˆÓ
-Private Const IDI_HAND = 32513&         '3:Œx
-Private Const IDI_QUESTION = 32514&     '4:–â‚¢‡‚í‚¹
-Private Const IDI_APPLICATION = 32512&  '–¢g—p
-Private Const IDI_WINLOGO = 32517&      '–¢g—p
+Private Const IDI_ASTERISK = 32516&     '1:æƒ…å ±
+Private Const IDI_EXCLAMATION = 32515&  '2:æ³¨æ„
+Private Const IDI_HAND = 32513&         '3:è­¦å‘Š
+Private Const IDI_QUESTION = 32514&     '4:å•ã„åˆã‚ã›
+Private Const IDI_APPLICATION = 32512&  'æœªä½¿ç”¨
+Private Const IDI_WINLOGO = 32517&      'æœªä½¿ç”¨
 
 '---------------------------------------------------------------------------------------------
-'ƒ†[ƒU[ƒtƒH[ƒ€ƒEƒBƒ“ƒhƒE§Œäİ’è
-Sub FrmDec(ƒtƒH[ƒ€–¼ As String, Optional Å¬‰» As Boolean = False, Optional Å‘å‰» As Boolean = False, Optional ƒTƒCƒY‰Â•Ï As Boolean = False)
+'ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒ•ã‚©ãƒ¼ãƒ ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦åˆ¶å¾¡è¨­å®š
+Sub FrmDec(ãƒ•ã‚©ãƒ¼ãƒ å As String, Optional æœ€å°åŒ– As Boolean = False, Optional æœ€å¤§åŒ– As Boolean = False, Optional ã‚µã‚¤ã‚ºå¯å¤‰ As Boolean = False)
     Dim fRet As Long
     Dim hWnd As Long
     Dim fStyle As Long
 
-    hWnd = FindWindow(LP_CLASSNAME, ƒtƒH[ƒ€–¼)
+    hWnd = FindWindow(LP_CLASSNAME, ãƒ•ã‚©ãƒ¼ãƒ å)
     fStyle = GetWindowLong(hWnd, GWL_STYLE)
-    If Å¬‰» Then
+    If æœ€å°åŒ– Then
         fStyle = (fStyle Or WS_MINIMIZEBOX)
     End If
-    If Å‘å‰» Then
+    If æœ€å¤§åŒ– Then
         fStyle = (fStyle Or WS_MAXIMIZEBOX)
     End If
-    If ƒTƒCƒY‰Â•Ï Then
+    If ã‚µã‚¤ã‚ºå¯å¤‰ Then
         fStyle = (fStyle Or WS_THICKFRAME)
     End If
     fRet = SetWindowLong(hWnd, GWL_STYLE, fStyle)
@@ -107,24 +106,24 @@ Sub FrmDec(ƒtƒH[ƒ€–¼ As String, Optional Å¬‰» As Boolean = False, Optional Å
 
 End Sub
 
-'ƒ†[ƒU[ƒtƒH[ƒ€ƒEƒBƒ“ƒhƒEŠK‘wİ’è
-Sub FrmPos(ƒtƒH[ƒ€–¼ As String, Optional Å‘O–Ê As Boolean = False)
+'ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒ•ã‚©ãƒ¼ãƒ ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦éšå±¤è¨­å®š
+Sub FrmPos(ãƒ•ã‚©ãƒ¼ãƒ å As String, Optional æœ€å‰é¢ As Boolean = False)
     Dim hWnd As Long
 
-    hWnd = FindWindow(LP_CLASSNAME, ƒtƒH[ƒ€–¼)
-    If Å‘O–Ê Then
+    hWnd = FindWindow(LP_CLASSNAME, ãƒ•ã‚©ãƒ¼ãƒ å)
+    If æœ€å‰é¢ Then
         Call SetWindowPos(hWnd, TUNENI_TEMAE_SET, 0, 0, 0, 0, HYOUZI_SURU Or NO_MOVE Or NO_SIZE)
     Else
         Call SetWindowPos(hWnd, KAIJYO, 0, 0, 0, 0, HYOUZI_SURU Or NO_MOVE Or NO_SIZE)
     End If
 End Sub
 
-'ƒ†[ƒU[ƒtƒH[ƒ€ƒEƒBƒ“ƒhƒEÅ¬‰»
-Sub FrmMin(ƒtƒH[ƒ€–¼ As String, Å¬‰» As Boolean)
+'ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒ•ã‚©ãƒ¼ãƒ ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦æœ€å°åŒ–
+Sub FrmMin(ãƒ•ã‚©ãƒ¼ãƒ å As String, æœ€å°åŒ– As Boolean)
     Dim hWnd As Long
 
-    hWnd = FindWindow(LP_CLASSNAME, ƒtƒH[ƒ€–¼)
-    If Å¬‰» Then
+    hWnd = FindWindow(LP_CLASSNAME, ãƒ•ã‚©ãƒ¼ãƒ å)
+    If æœ€å°åŒ– Then
         Call CloseWindow(hWnd)
     Else
         Call OpenIcon(hWnd)
@@ -132,230 +131,230 @@ Sub FrmMin(ƒtƒH[ƒ€–¼ As String, Å¬‰» As Boolean)
 End Sub
 
 '---------------------------------------------------------------------------------------------
-Function DBÚ‘±(oWks As DAO.Workspace, Optional ReadOnly As Boolean = True) As DAO.Database
+Function DBæ¥ç¶š(oWks As DAO.Workspace, Optional ReadOnly As Boolean = True) As DAO.Database
 
-    Set DBÚ‘± = oWks.OpenDatabase(ThisWorkbook.Path & "\" & ƒf[ƒ^ƒx[ƒX–¼, False, ReadOnly, ";PWD=" & DBƒpƒXƒ[ƒh)
+    Set DBæ¥ç¶š = oWks.OpenDatabase(ThisWorkbook.Path & "\" & ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹å, False, ReadOnly, ";PWD=" & DBãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰)
 
 End Function
 
 '---------------------------------------------------------------------------------------------
-Sub ƒVƒXƒeƒ€_ÅV_Click()
+Sub ã‚·ã‚¹ãƒ†ãƒ _æœ€æ–°_Click()
 
-    '‰æ–Ê•`‰æXV’â~(ˆ—‚‘¬‰»)
+    'ç”»é¢æç”»æ›´æ–°åœæ­¢(å‡¦ç†é«˜é€ŸåŒ–)
     Application.ScreenUpdating = False
 
-    Dim ƒVƒXƒeƒ€ƒV[ƒg As Worksheet
-    Set ƒVƒXƒeƒ€ƒV[ƒg = ThisWorkbook.Worksheets("ƒVƒXƒeƒ€")
-    Dim ÅIs As Long
-    ÅIs = ƒVƒXƒeƒ€ƒV[ƒg.UsedRange.Find("*", , xlFormulas, , xlByRows, xlPrevious).Row
-    If ÅIs >= ƒVƒXƒeƒ€ƒf[ƒ^ŠJns Then
-        ƒVƒXƒeƒ€ƒV[ƒg.Rows(ƒVƒXƒeƒ€ƒf[ƒ^ŠJns & ":" & ÅIs).Delete Shift:=xlUp
+    Dim ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ As Worksheet
+    Set ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ = ThisWorkbook.Worksheets("ã‚·ã‚¹ãƒ†ãƒ ")
+    Dim æœ€çµ‚è¡Œ As Long
+    æœ€çµ‚è¡Œ = ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.UsedRange.Find("*", , xlFormulas, , xlByRows, xlPrevious).Row
+    If æœ€çµ‚è¡Œ >= ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹è¡Œ Then
+        ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.Rows(ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹è¡Œ & ":" & æœ€çµ‚è¡Œ).Delete Shift:=xlUp
     End If
 
-    'SQL¶¬
+    'SQLç”Ÿæˆ
     Dim sql As String
-    sql = "SELECT €–Ú–¼, ’l" _
-        & " FROM M_ƒVƒXƒeƒ€" _
-        & " WHERE [í•Ê] = " & ƒVƒXƒeƒ€í•Ê_ƒo[ƒWƒ‡ƒ“
+    sql = "SELECT é …ç›®å, å€¤" _
+        & " FROM M_ã‚·ã‚¹ãƒ†ãƒ " _
+        & " WHERE [ç¨®åˆ¥] = " & ã‚·ã‚¹ãƒ†ãƒ ç¨®åˆ¥_ãƒãƒ¼ã‚¸ãƒ§ãƒ³
 
-    'ƒf[ƒ^ƒx[ƒXÚ‘±
+    'ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š
     On Error GoTo ErrDBOpen
     Dim oWks As DAO.Workspace, oDB As DAO.Database, oRS As DAO.Recordset
-    Set oWks = CreateObject(DAOƒGƒ“ƒWƒ“).Workspaces(0)
-    Set oDB = DBÚ‘±(oWks, True)
+    Set oWks = CreateObject(DAOã‚¨ãƒ³ã‚¸ãƒ³).Workspaces(0)
+    Set oDB = DBæ¥ç¶š(oWks, True)
 
-    'ƒŒƒR[ƒhƒZƒbƒgæ“¾
+    'ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚»ãƒƒãƒˆå–å¾—
     On Error GoTo ErrRSOpen
 
-    'ƒVƒXƒeƒ€î•ñXV
+    'ã‚·ã‚¹ãƒ†ãƒ æƒ…å ±æ›´æ–°
     Set oRS = oDB.OpenRecordset(sql, dbOpenDynaset)
-    ƒVƒXƒeƒ€ƒV[ƒg.Cells(ƒVƒXƒeƒ€ƒf[ƒ^ŠJns, ƒVƒXƒeƒ€ƒf[ƒ^ŠJn—ñ).CopyFromRecordset oRS
+    ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.Cells(ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹è¡Œ, ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹åˆ—).CopyFromRecordset oRS
 
-    'ƒo[ƒWƒ‡ƒ“ƒ`ƒFƒbƒN•ƒAƒbƒvƒf[ƒg
-    Dim Œ»ƒo[ƒWƒ‡ƒ“ As String, Vƒo[ƒWƒ‡ƒ“ As String
+    'ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãƒã‚§ãƒƒã‚¯ï¼†ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ
+    Dim ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³ As String, æ–°ãƒãƒ¼ã‚¸ãƒ§ãƒ³ As String
     oRS.MoveFirst
-    Œ»ƒo[ƒWƒ‡ƒ“ = ƒVƒXƒeƒ€ƒV[ƒg.Range("C5").Value
-    Vƒo[ƒWƒ‡ƒ“ = ƒVƒXƒeƒ€ƒV[ƒg.Range("C2").Value
+    ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³ = ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.Range("C5").Value
+    æ–°ãƒãƒ¼ã‚¸ãƒ§ãƒ³ = ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.Range("C2").Value
 
-    'ƒf[ƒ^ƒx[ƒXØ’f
+    'ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹åˆ‡æ–­
     oRS.Close
     Set oRS = Nothing
     oDB.Close
     Set oDB = Nothing
     On Error GoTo 0
 
-    If Œ»ƒo[ƒWƒ‡ƒ“ <> Vƒo[ƒWƒ‡ƒ“ Then
-        If MsgBox("ƒf[ƒ^ƒx[ƒX‚Ìƒo[ƒWƒ‡ƒ“‚ªˆê’v‚µ‚Ü‚¹‚ñBƒAƒbƒvƒOƒŒ[ƒh‚µ‚Ü‚·‚©H" & vbCrLf & "¦Às‘O‚Éƒf[ƒ^ƒx[ƒX‚ÌƒoƒbƒNƒAƒbƒv‚ğ‚¨Š©‚ß‚µ‚Ü‚·B", vbOKCancel + vbInformation) = vbOK Then
-            DBƒo[ƒWƒ‡ƒ“XV Œ»ƒo[ƒWƒ‡ƒ“
+    If ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³ <> æ–°ãƒãƒ¼ã‚¸ãƒ§ãƒ³ Then
+        If MsgBox("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãŒä¸€è‡´ã—ã¾ã›ã‚“ã€‚ã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰ã—ã¾ã™ã‹ï¼Ÿ" & vbCrLf & "â€»å®Ÿè¡Œå‰ã«ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã‚’ãŠå‹§ã‚ã—ã¾ã™ã€‚", vbOKCancel + vbInformation) = vbOK Then
+            DBãƒãƒ¼ã‚¸ãƒ§ãƒ³æ›´æ–° ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³
         End If
     End If
     Exit Sub
 
 ErrRSOpen:
-    'ƒf[ƒ^ƒx[ƒXØ’f
+    'ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹åˆ‡æ–­
     Set oRS = Nothing
     oDB.Close
     Set oDB = Nothing
 
-    MsgBox "ƒf[ƒ^ƒx[ƒXî•ñ‚Ì“Ço‚É¸”s‚µ‚Ü‚µ‚½BÄ“xÀs‚µ‚Ä‚­‚¾‚³‚¢B(" & Err.Number & ")", vbExclamation
+    MsgBox "ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æƒ…å ±ã®èª­å‡ºã«å¤±æ•—ã—ã¾ã—ãŸã€‚å†åº¦å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚(" & Err.Number & ")", vbExclamation
     Exit Sub
 
 ErrDBOpen:
-    MsgBox "ƒf[ƒ^ƒx[ƒX‚ÌÚ‘±‚É¸”s‚µ‚Ü‚µ‚½B(" & Err.Number & ")", vbCritical
+    MsgBox "ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®æ¥ç¶šã«å¤±æ•—ã—ã¾ã—ãŸã€‚(" & Err.Number & ")", vbCritical
 
 End Sub
 
-Function DBƒo[ƒWƒ‡ƒ“Šm”F() As Boolean
+Function DBãƒãƒ¼ã‚¸ãƒ§ãƒ³ç¢ºèª() As Boolean
 
-    Dim ƒVƒXƒeƒ€ƒV[ƒg As Worksheet
-    Set ƒVƒXƒeƒ€ƒV[ƒg = ThisWorkbook.Worksheets("ƒVƒXƒeƒ€")
-    Dim Œ»ƒo[ƒWƒ‡ƒ“ As String, Vƒo[ƒWƒ‡ƒ“ As String
-    Œ»ƒo[ƒWƒ‡ƒ“ = ƒVƒXƒeƒ€ƒV[ƒg.Range("C5").Value
-    Vƒo[ƒWƒ‡ƒ“ = ƒVƒXƒeƒ€ƒV[ƒg.Range("C2").Value
-    DBƒo[ƒWƒ‡ƒ“Šm”F = (Œ»ƒo[ƒWƒ‡ƒ“ = Vƒo[ƒWƒ‡ƒ“)
+    Dim ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ As Worksheet
+    Set ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ = ThisWorkbook.Worksheets("ã‚·ã‚¹ãƒ†ãƒ ")
+    Dim ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³ As String, æ–°ãƒãƒ¼ã‚¸ãƒ§ãƒ³ As String
+    ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³ = ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.Range("C5").Value
+    æ–°ãƒãƒ¼ã‚¸ãƒ§ãƒ³ = ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.Range("C2").Value
+    DBãƒãƒ¼ã‚¸ãƒ§ãƒ³ç¢ºèª = (ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³ = æ–°ãƒãƒ¼ã‚¸ãƒ§ãƒ³)
 
 End Function
 
-Private Sub DBƒo[ƒWƒ‡ƒ“XV(Œ»ƒo[ƒWƒ‡ƒ“ As String)
+Private Sub DBãƒãƒ¼ã‚¸ãƒ§ãƒ³æ›´æ–°(ç¾ãƒãƒ¼ã‚¸ãƒ§ãƒ³ As String)
 
-    Dim ƒVƒXƒeƒ€ƒV[ƒg As Worksheet
-    Set ƒVƒXƒeƒ€ƒV[ƒg = ThisWorkbook.Worksheets("ƒVƒXƒeƒ€")
+    Dim ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ As Worksheet
+    Set ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ = ThisWorkbook.Worksheets("ã‚·ã‚¹ãƒ†ãƒ ")
 
-    'ƒf[ƒ^ƒx[ƒXÚ‘±
+    'ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š
     On Error GoTo ErrDBOpen
     Dim oWks As DAO.Workspace, oDB As DAO.Database, oRS As DAO.Recordset
-    Set oWks = CreateObject(DAOƒGƒ“ƒWƒ“).Workspaces(0)
-    Set oDB = DBÚ‘±(oWks, False)
+    Set oWks = CreateObject(DAOã‚¨ãƒ³ã‚¸ãƒ³).Workspaces(0)
+    Set oDB = DBæ¥ç¶š(oWks, False)
 
     On Error GoTo ErrRSOpen
 
-    'ƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“ŠJn
+    'ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³é–‹å§‹
     oWks.BeginTrans
 
-    'ƒo[ƒWƒ‡ƒ“‚É‰‚¶‚ÄXVˆ—‚ğ‹Lq
+    'ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã«å¿œã˜ã¦æ›´æ–°å‡¦ç†ã‚’è¨˜è¿°
 
-    'ƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“Š®—¹
+    'ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³å®Œäº†
     oWks.CommitTrans
 
-    'ƒVƒXƒeƒ€î•ñXV
-    Dim ÅIs As Long
-    ÅIs = ƒVƒXƒeƒ€ƒV[ƒg.UsedRange.Find("*", , xlFormulas, , xlByRows, xlPrevious).Row
-    If ÅIs >= ƒVƒXƒeƒ€ƒf[ƒ^ŠJns Then
-        ƒVƒXƒeƒ€ƒV[ƒg.Rows(ƒVƒXƒeƒ€ƒf[ƒ^ŠJns & ":" & ÅIs).Delete Shift:=xlUp
+    'ã‚·ã‚¹ãƒ†ãƒ æƒ…å ±æ›´æ–°
+    Dim æœ€çµ‚è¡Œ As Long
+    æœ€çµ‚è¡Œ = ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.UsedRange.Find("*", , xlFormulas, , xlByRows, xlPrevious).Row
+    If æœ€çµ‚è¡Œ >= ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹è¡Œ Then
+        ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.Rows(ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹è¡Œ & ":" & æœ€çµ‚è¡Œ).Delete Shift:=xlUp
     End If
     Dim sql As String
-    sql = "SELECT €–Ú–¼, ’l" _
-        & " FROM M_ƒVƒXƒeƒ€" _
-        & " WHERE [í•Ê] = " & ƒVƒXƒeƒ€í•Ê_ƒo[ƒWƒ‡ƒ“
+    sql = "SELECT é …ç›®å, å€¤" _
+        & " FROM M_ã‚·ã‚¹ãƒ†ãƒ " _
+        & " WHERE [ç¨®åˆ¥] = " & ã‚·ã‚¹ãƒ†ãƒ ç¨®åˆ¥_ãƒãƒ¼ã‚¸ãƒ§ãƒ³
     Set oRS = oDB.OpenRecordset(sql, dbOpenDynaset)
-    ƒVƒXƒeƒ€ƒV[ƒg.Cells(ƒVƒXƒeƒ€ƒf[ƒ^ŠJns, ƒVƒXƒeƒ€ƒf[ƒ^ŠJn—ñ).CopyFromRecordset oRS
+    ã‚·ã‚¹ãƒ†ãƒ ã‚·ãƒ¼ãƒˆ.Cells(ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹è¡Œ, ã‚·ã‚¹ãƒ†ãƒ ãƒ‡ãƒ¼ã‚¿é–‹å§‹åˆ—).CopyFromRecordset oRS
 
-    'ƒf[ƒ^ƒx[ƒXØ’f
+    'ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹åˆ‡æ–­
     oRS.Close
     Set oRS = Nothing
     oDB.Close
     Set oDB = Nothing
     On Error GoTo 0
 
-    MsgBox "ƒf[ƒ^ƒx[ƒX‚ÌƒAƒbƒvƒOƒŒ[ƒh‚ªŠ®—¹‚µ‚Ü‚µ‚½B", vbInformation
+    MsgBox "ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰ãŒå®Œäº†ã—ã¾ã—ãŸã€‚", vbInformation
     Exit Sub
 
 ErrRSOpen:
-    'ƒf[ƒ^ƒx[ƒXØ’f
+    'ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹åˆ‡æ–­
     Set oRS = Nothing
     oDB.Close
     Set oDB = Nothing
 
-    MsgBox "ƒf[ƒ^ƒx[ƒX‚ÌƒAƒbƒvƒOƒŒ[ƒh‚É¸”s‚µ‚Ü‚µ‚½BÄ“xÀs‚µ‚Ä‚­‚¾‚³‚¢B(" & Err.Number & ")", vbExclamation
+    MsgBox "ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰ã«å¤±æ•—ã—ã¾ã—ãŸã€‚å†åº¦å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚(" & Err.Number & ")", vbExclamation
     Exit Sub
 
 ErrDBOpen:
-    MsgBox "ƒf[ƒ^ƒx[ƒX‚ÌÚ‘±‚É¸”s‚µ‚Ü‚µ‚½B(" & Err.Number & ")", vbCritical
+    MsgBox "ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®æ¥ç¶šã«å¤±æ•—ã—ã¾ã—ãŸã€‚(" & Err.Number & ")", vbCritical
 
 End Sub
 
-Private Sub DBƒtƒB[ƒ‹ƒh’Ç‰Á(oDB As DAO.Database, ƒe[ƒuƒ‹–¼ As String, ƒtƒB[ƒ‹ƒh–¼ As String, Œ^ As Variant, Optional ˆÊ’u As Integer = -1)
+Private Sub DBãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰è¿½åŠ (oDB As DAO.Database, ãƒ†ãƒ¼ãƒ–ãƒ«å As String, ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰å As String, å‹ As Variant, Optional ä½ç½® As Integer = -1)
 
     Dim tdef As DAO.TableDef
     Dim fld As DAO.Field
     Dim prp As DAO.Property
 
-    'ƒtƒB[ƒ‹ƒh’Ç‰Á
-    Set tdef = oDB.TableDefs(ƒe[ƒuƒ‹–¼)
-    tdef.Fields.Append tdef.CreateField(ƒtƒB[ƒ‹ƒh–¼, Œ^)
+    'ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰è¿½åŠ 
+    Set tdef = oDB.TableDefs(ãƒ†ãƒ¼ãƒ–ãƒ«å)
+    tdef.Fields.Append tdef.CreateField(ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰å, å‹)
 
-    'ˆÊ’u•ÏX
-    If ˆÊ’u = -1 Then
-        'ƒfƒtƒHƒ‹ƒg‚Í––”ö‚Öİ’è
-        ˆÊ’u = tdef.Fields.Count - 1
+    'ä½ç½®å¤‰æ›´
+    If ä½ç½® = -1 Then
+        'ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã¯æœ«å°¾ã¸è¨­å®š
+        ä½ç½® = tdef.Fields.Count - 1
     End If
-    Set fld = tdef.Fields(ƒtƒB[ƒ‹ƒh–¼)
-    fld.OrdinalPosition = ˆÊ’u
+    Set fld = tdef.Fields(ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰å)
+    fld.OrdinalPosition = ä½ç½®
     tdef.Fields.Refresh
 
 End Sub
 
 '---------------------------------------------------------------------------------------------
-Function ID”Ô†‘®ƒ`ƒFƒbƒN(Ú“ª« As String, ID”Ô† As String) As Boolean
+Function IDç•ªå·æ›¸å¼ãƒã‚§ãƒƒã‚¯(æ¥é ­è¾ As String, IDç•ªå· As String) As Boolean
 
     Dim RE, reMatch
     Set RE = CreateObject("VBScript.RegExp")
     With RE
-        .Pattern = "^" & Ú“ª« & "\d\d\d\d\d\d\d\d-\d\d\d\d$" 'ŒŸõƒpƒ^[ƒ“‚ğİ’è
-        .IgnoreCase = False '‘å•¶š‚Æ¬•¶š‚ğ‹æ•Ê‚·‚é
-        .Global = True '•¶š—ñ‘S‘Ì‚ğŒŸõ
-        Set reMatch = .Execute(ID”Ô†)
+        .Pattern = "^" & æ¥é ­è¾ & "\d\d\d\d\d\d\d\d-\d\d\d\d$" 'æ¤œç´¢ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’è¨­å®š
+        .IgnoreCase = False 'å¤§æ–‡å­—ã¨å°æ–‡å­—ã‚’åŒºåˆ¥ã™ã‚‹
+        .Global = True 'æ–‡å­—åˆ—å…¨ä½“ã‚’æ¤œç´¢
+        Set reMatch = .Execute(IDç•ªå·)
         If reMatch.Count = 0 Then
-            ID”Ô†‘®ƒ`ƒFƒbƒN = False
+            IDç•ªå·æ›¸å¼ãƒã‚§ãƒƒã‚¯ = False
             Exit Function
         End If
     End With
     Set RE = Nothing
-    ID”Ô†‘®ƒ`ƒFƒbƒN = True
+    IDç•ªå·æ›¸å¼ãƒã‚§ãƒƒã‚¯ = True
     
 End Function
 
 '---------------------------------------------------------------------------------------------
-Function ƒvƒƒWƒFƒNƒg‘®ƒ`ƒFƒbƒN(ƒvƒƒWƒFƒNƒg As String) As Boolean
+Function ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæ›¸å¼ãƒã‚§ãƒƒã‚¯(ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ As String) As Boolean
 
     Dim RE, reMatch
     Set RE = CreateObject("VBScript.RegExp")
     With RE
-        .Pattern = "\d\d\d\d$" 'ŒŸõƒpƒ^[ƒ“‚ğİ’è
-        .IgnoreCase = False '‘å•¶š‚Æ¬•¶š‚ğ‹æ•Ê‚·‚é
-        .Global = True '•¶š—ñ‘S‘Ì‚ğŒŸõ
-        Set reMatch = .Execute(ƒvƒƒWƒFƒNƒg)
+        .Pattern = "\d\d\d\d$" 'æ¤œç´¢ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’è¨­å®š
+        .IgnoreCase = False 'å¤§æ–‡å­—ã¨å°æ–‡å­—ã‚’åŒºåˆ¥ã™ã‚‹
+        .Global = True 'æ–‡å­—åˆ—å…¨ä½“ã‚’æ¤œç´¢
+        Set reMatch = .Execute(ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ)
         If reMatch.Count = 0 Then
-            ƒvƒƒWƒFƒNƒg‘®ƒ`ƒFƒbƒN = False
+            ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæ›¸å¼ãƒã‚§ãƒƒã‚¯ = False
             Exit Function
         End If
     End With
     Set RE = Nothing
-    ƒvƒƒWƒFƒNƒg‘®ƒ`ƒFƒbƒN = True
+    ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæ›¸å¼ãƒã‚§ãƒƒã‚¯ = True
     
 End Function
 
 '---------------------------------------------------------------------------------------------
-Function ƒ`ƒPƒbƒg–¼‘®ƒ`ƒFƒbƒN(ƒ`ƒPƒbƒg–¼ As String) As Boolean
+Function ãƒã‚±ãƒƒãƒˆåæ›¸å¼ãƒã‚§ãƒƒã‚¯(ãƒã‚±ãƒƒãƒˆå As String) As Boolean
 
     Dim RE, reMatch
     Set RE = CreateObject("VBScript.RegExp")
     With RE
-        .Pattern = "^#" & "\d\d\d\d(||\d)$" 'ŒŸõƒpƒ^[ƒ“‚ğİ’è
-        .IgnoreCase = False '‘å•¶š‚Æ¬•¶š‚ğ‹æ•Ê‚·‚é
-        .Global = True '•¶š—ñ‘S‘Ì‚ğŒŸõ
-        Set reMatch = .Execute(ƒ`ƒPƒbƒg–¼)
+        .Pattern = "^#" & "\d\d\d\d(||\d)$" 'æ¤œç´¢ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’è¨­å®š
+        .IgnoreCase = False 'å¤§æ–‡å­—ã¨å°æ–‡å­—ã‚’åŒºåˆ¥ã™ã‚‹
+        .Global = True 'æ–‡å­—åˆ—å…¨ä½“ã‚’æ¤œç´¢
+        Set reMatch = .Execute(ãƒã‚±ãƒƒãƒˆå)
         If reMatch.Count = 0 Then
-            ƒ`ƒPƒbƒg–¼‘®ƒ`ƒFƒbƒN = False
+            ãƒã‚±ãƒƒãƒˆåæ›¸å¼ãƒã‚§ãƒƒã‚¯ = False
             Exit Function
         End If
     End With
     Set RE = Nothing
-    ƒ`ƒPƒbƒg–¼‘®ƒ`ƒFƒbƒN = True
+    ãƒã‚±ãƒƒãƒˆåæ›¸å¼ãƒã‚§ãƒƒã‚¯ = True
     
 End Function
 
-' NULLƒuƒ‰ƒ“ƒN•¶š—ñ•ÏŠ·
+' NULLãƒ–ãƒ©ãƒ³ã‚¯æ–‡å­—åˆ—å¤‰æ›
 Function Null2Blank(val As Variant) As Variant
 
     If IsNull(val) Then
@@ -366,7 +365,7 @@ Function Null2Blank(val As Variant) As Variant
 
 End Function
 
-' ƒuƒ‰ƒ“ƒN•¶š—ñNULL•ÏŠ·
+' ãƒ–ãƒ©ãƒ³ã‚¯æ–‡å­—åˆ—NULLå¤‰æ›
 Function Blank2Null(val As Variant) As Variant
     
     If val = "" Then
@@ -378,10 +377,10 @@ Function Blank2Null(val As Variant) As Variant
 End Function
 
 '---------------------------------------------------------------------------------------------
-' —ñ”Ô†ƒAƒ‹ƒtƒ@ƒxƒbƒg•ÏŠ·
+' åˆ—ç•ªå·ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆå¤‰æ›
 '
-' ˆø”   lngColNum : —ñ”Ô†
-' –ß‚è’l —ñƒAƒ‹ƒtƒ@ƒxƒbƒg•¶š—ñ
+' å¼•æ•°   lngColNum : åˆ—ç•ªå·
+' æˆ»ã‚Šå€¤ åˆ—ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆæ–‡å­—åˆ—
 '---------------------------------------------------------------------------------------------
 Function ColNum2Txt(lngColNum As Long) As String
 
@@ -400,7 +399,7 @@ ErrHandler:
 
 End Function
 
-' “ú•t€–ÚDBİ’è—p®Œ`
+' æ—¥ä»˜é …ç›®DBè¨­å®šç”¨æ•´å½¢
 Function DBDateInput(dateStr As String) As Variant
     If dateStr = "" Or dateStr = "-" Then
         DBDateInput = Null
@@ -409,21 +408,21 @@ Function DBDateInput(dateStr As String) As Variant
     End If
 End Function
 
-'ƒ†[ƒU[ƒtƒH[ƒ€ƒAƒCƒRƒ“•`‰æ
-Sub ShowSystemIcon(ƒtƒH[ƒ€–¼ As String, IDI As Long)
+'ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒ•ã‚©ãƒ¼ãƒ ã‚¢ã‚¤ã‚³ãƒ³æç”»
+Sub ShowSystemIcon(ãƒ•ã‚©ãƒ¼ãƒ å As String, IDI As Long)
   Dim objHandle As Long
   Dim hWnd As Long
   Dim PictDC As Long
 
   objHandle& = LoadIconBynum(0, IDI&)
-  hWnd = FindWindow(LP_CLASSNAME, ƒtƒH[ƒ€–¼)
+  hWnd = FindWindow(LP_CLASSNAME, ãƒ•ã‚©ãƒ¼ãƒ å)
   PictDC = GetWindowDC(hWnd)
   DrawIcon PictDC, 10, 30, objHandle&
   ReleaseDC hWnd, PictDC
   DestroyIcon objHandle&
 End Sub
 
-' ’Ê‰İ€–ÚDB•\¦—p®Œ`
+' é€šè²¨é …ç›®DBè¡¨ç¤ºç”¨æ•´å½¢
 Function SearchComboboxText(Combobox As Variant, SearchIdx As Long, Keyword As String) As String
 
     SearchComboboxText = ""
@@ -436,57 +435,57 @@ Function SearchComboboxText(Combobox As Variant, SearchIdx As Long, Keyword As S
     
 End Function
 
-Function —\’èƒ`ƒFƒbƒN(“ú•t As String) As Boolean
+Function äºˆå®šãƒã‚§ãƒƒã‚¯(æ—¥ä»˜ As String) As Boolean
     
-    Dim QÆƒV[ƒg As Worksheet, o—Ís, o—Í—ñ As Long
-    Set QÆƒV[ƒg = ThisWorkbook.Worksheets("—\’è“ú•t")
-    —\’èƒ`ƒFƒbƒN = False
-    o—Ís = 2
-    o—Í—ñ = 1
-    'ƒf[ƒ^‰ğÍ
-    ÅIs = QÆƒV[ƒg.UsedRange.Find("*", , xlFormulas, , xlByRows, xlPrevious).Row
-    ÅI—ñ = QÆƒV[ƒg.UsedRange.Columns(QÆƒV[ƒg.UsedRange.Columns.Count).Column
+    Dim å‚ç…§ã‚·ãƒ¼ãƒˆ As Worksheet, å‡ºåŠ›è¡Œ, å‡ºåŠ›åˆ— As Long
+    Set å‚ç…§ã‚·ãƒ¼ãƒˆ = ThisWorkbook.Worksheets("äºˆå®šæ—¥ä»˜")
+    äºˆå®šãƒã‚§ãƒƒã‚¯ = False
+    å‡ºåŠ›è¡Œ = 2
+    å‡ºåŠ›åˆ— = 1
+    'ãƒ‡ãƒ¼ã‚¿è§£æ
+    æœ€çµ‚è¡Œ = å‚ç…§ã‚·ãƒ¼ãƒˆ.UsedRange.Find("*", , xlFormulas, , xlByRows, xlPrevious).Row
+    æœ€çµ‚åˆ— = å‚ç…§ã‚·ãƒ¼ãƒˆ.UsedRange.Columns(å‚ç…§ã‚·ãƒ¼ãƒˆ.UsedRange.Columns.Count).Column
     
-    For i = o—Ís To ÅIs
-        If “ú•t = QÆƒV[ƒg.Cells(i, 1).Value Then
-            —\’èƒ`ƒFƒbƒN = True
+    For i = å‡ºåŠ›è¡Œ To æœ€çµ‚è¡Œ
+        If æ—¥ä»˜ = å‚ç…§ã‚·ãƒ¼ãƒˆ.Cells(i, 1).Value Then
+            äºˆå®šãƒã‚§ãƒƒã‚¯ = True
             Exit For
         End If
     Next i
     
 End Function
 
-Sub ‹L˜^“ú•t()
+Sub è¨˜éŒ²æ—¥ä»˜()
 
-    Dim QÆƒV[ƒg As Worksheet, o—Ís As Long
-    Set QÆƒV[ƒg = ThisWorkbook.Worksheets("ƒvƒƒWƒFƒNƒgŠÔ‹L˜^")
+    Dim å‚ç…§ã‚·ãƒ¼ãƒˆ As Worksheet, å‡ºåŠ›è¡Œ As Long
+    Set å‚ç…§ã‚·ãƒ¼ãƒˆ = ThisWorkbook.Worksheets("ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæ™‚é–“è¨˜éŒ²")
     
-    'ƒf[ƒ^‰ğÍ
-    ÅIs = QÆƒV[ƒg.UsedRange.Find("*", , xlFormulas, , xlByRows, xlPrevious).Row
-    ÅI—ñ = QÆƒV[ƒg.UsedRange.Columns(QÆƒV[ƒg.UsedRange.Columns.Count).Column
+    'ãƒ‡ãƒ¼ã‚¿è§£æ
+    æœ€çµ‚è¡Œ = å‚ç…§ã‚·ãƒ¼ãƒˆ.UsedRange.Find("*", , xlFormulas, , xlByRows, xlPrevious).Row
+    æœ€çµ‚åˆ— = å‚ç…§ã‚·ãƒ¼ãƒˆ.UsedRange.Columns(å‚ç…§ã‚·ãƒ¼ãƒˆ.UsedRange.Columns.Count).Column
     
-    '“ú•tİ’è
-    ThisWorkbook.Worksheets("“ú•t").Activate
+    'æ—¥ä»˜è¨­å®š
+    ThisWorkbook.Worksheets("æ—¥ä»˜").Activate
     For i = 1 To 8
-        Worksheets("“ú•t").Cells(i, 1).Value = DateAdd("d", i - 8, Date)
+        Worksheets("æ—¥ä»˜").Cells(i, 1).Value = DateAdd("d", i - 8, Date)
     Next i
 
     
-    '“ú•t‰Šú‰»
-    o—Ís = 2
-    QÆƒV[ƒg.Activate
-    QÆƒV[ƒg.Unprotect (ƒpƒXƒ[ƒh)
-    With QÆƒV[ƒg.Range("A2", "A1000").Validation
+    'æ—¥ä»˜åˆæœŸåŒ–
+    å‡ºåŠ›è¡Œ = 2
+    å‚ç…§ã‚·ãƒ¼ãƒˆ.Activate
+    å‚ç…§ã‚·ãƒ¼ãƒˆ.Unprotect (ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰)
+    With å‚ç…§ã‚·ãƒ¼ãƒˆ.Range("A2", "A1000").Validation
         .Delete
-        .Add Type:=xlValidateList, Formula1:="=“ú•t!$A$1:$A$8"
+        .Add Type:=xlValidateList, Formula1:="=æ—¥ä»˜!$A$1:$A$8"
     End With
     
-    With QÆƒV[ƒg.Range("E2", "E1000").Validation
+    With å‚ç…§ã‚·ãƒ¼ãƒˆ.Range("E2", "E1000").Validation
         .Delete
-        .Add Type:=xlValidateList, Formula1:="=‹Î–±İ’è!$A$2:$A$3"
+        .Add Type:=xlValidateList, Formula1:="=å‹¤å‹™è¨­å®š!$A$2:$A$3"
     End With
         
-    QÆƒV[ƒg.Protect Password:=•ÛŒìƒpƒXƒ[ƒh, UserInterfaceOnly:=True, AllowFiltering:=True
+    å‚ç…§ã‚·ãƒ¼ãƒˆ.Protect Password:=ä¿è­·ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰, UserInterfaceOnly:=True, AllowFiltering:=True
     
 End Sub
 
