@@ -1,0 +1,30 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+END
+Attribute VB_Name = "ThisWorkbook"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+
+' ワークブックを開く時のイベント
+Private Sub Workbook_Open()
+    
+    
+    '全シートを保護(マクロ操作は除外)
+    For Each 参照シート In Sheets
+        If 参照シート.Name <> "プロジェクト時間記録" Then
+            参照シート.Protect Password:=保護パスワード, UserInterfaceOnly:=True, AllowFiltering:=True
+        End If
+    Next 参照シート
+    
+'    Call Module1.記録日付
+    
+'    'データベースバージョンチェック
+'    システム_最新_Click
+    
+'    ログインフォーム起動
+    ufm操作メニュー.Show
+
+End Sub
